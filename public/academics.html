@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,15 +12,27 @@
     <link href='fullcalendar/main.css' rel='stylesheet' />
     <script src='fullcalendar/main.js'></script>
     <script type='text/javascript'>
-        $(document).ready(function() {
-            $('#calendar').fullCalendar({
-                googleCalendarApiKey: 'AIzaSyBr4y6Vd-wllfgQnv2f9b8gJbr6WB7w4N8',
-                events: {
-                    googleCalendarId: 'abcd1234@group.calendar.google.com',
-                    className: 'gcal-event'
-                }
-            });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('academicscalendar');
+    
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          googleCalendarApiKey: 'AIzaSyBr4y6Vd-wllfgQnv2f9b8gJbr6WB7w4N8',
+          eventSources: [
+            {
+              googleCalendarId: 'beef@beef.com',
+              color: 'red'
+            },
+            {
+              googleCalendarId: 'beef@beef.com',
+              color: 'green'
+            }
+          ]
         });
+    
+        calendar.render();
+      });
+    
     </script>
 </head>
 
@@ -33,11 +45,15 @@
 
   <div class="container">
     <h1><span>Academics</span></h1>
-    <p>This is our homebase. It's a centralized collection of all the events and initiatives that are unique to the McMaster Bachelor of Health Sciences (Honours) Class of 2024. That includes academic resources for our courses, upcoming events, and promoting class-wide spirit. All the content on this website is managed by the <a href="about.html">Bachelor of Health Sciences Society First Year Council</a>.</p>
+    <p>This page is still under construction.</p>
 
+    <br>
+    <br>
+    <br>
+    <h2>Academics Calendar</h2>
+    <p>Here's a calendar with all our upcoming events and initiatives.</p>
+    <div id='academicscalendar'></div>
   </div>
-
-  
 </div>
 
   <footer class="panel-footer"><div id="footer"></div></footer>
@@ -45,7 +61,6 @@
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
-  <script type='text/javascript' src='fullcalendar/gcal.js'></script>
 
   <script src="/__/firebase/8.0.2/firebase-app.js"></script>
   <script src="/__/firebase/8.0.2/firebase-analytics.js"></script>
