@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BHSS FYC</title>
+    <link rel = "icon" href ="icons/logo.jpg" type = "image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='fullcalendar/main.css' rel='stylesheet' />
+    <script src='fullcalendar/main.js'></script>
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                googleCalendarApiKey: 'AIzaSyBr4y6Vd-wllfgQnv2f9b8gJbr6WB7w4N8',
+                events: {
+                    googleCalendarId: 'abcd1234@group.calendar.google.com',
+                    className: 'gcal-event'
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+  <header><div id="navigation"></div></header>
+
+  <div class="jumbotron-fluid">
+    <img src="icons/banner.jpg" alt="">
+  </div>
+
+  <div class="container">
+    <h1><span>Academics</span></h1>
+    <p>This is our homebase. It's a centralized collection of all the events and initiatives that are unique to the McMaster Bachelor of Health Sciences (Honours) Class of 2024. That includes academic resources for our courses, upcoming events, and promoting class-wide spirit. All the content on this website is managed by the <a href="about.html">Bachelor of Health Sciences Society First Year Council</a>.</p>
+
+  </div>
+
+  
+</div>
+
+  <footer class="panel-footer"><div id="footer"></div></footer>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type='text/javascript' src='fullcalendar/gcal.js'></script>
+
+  <script src="/__/firebase/8.0.2/firebase-app.js"></script>
+  <script src="/__/firebase/8.0.2/firebase-analytics.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+
+</body>
+</html>
