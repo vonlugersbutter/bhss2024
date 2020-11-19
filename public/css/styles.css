@@ -36,8 +36,10 @@ body {
 	width: 70%;
 }
 
-@media (min-width:992px) {
-	
+@media (max-width:992px) {
+	.container {
+		width: 95%;
+	}
 }
 
 .jumbotron-fluid > img {
@@ -69,6 +71,10 @@ h1 {
 	font-family: 'Playfair Display', serif;
 	padding-top: 2em;
 	padding-bottom: 0.5em;
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
 }
 
 span {
