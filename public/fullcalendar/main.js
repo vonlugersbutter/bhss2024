@@ -1686,7 +1686,7 @@ var FullCalendar = (function (exports) {
         headerToolbar: {
             start: 'title',
             center: '',
-            end: 'today prev,next',
+            end: 'prev,next',
         },
         weekends: true,
         weekNumbers: false,
