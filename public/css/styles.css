@@ -80,3 +80,11 @@ h2 {
 span {
 	background-color: #8ECAE6;
 }
+
+.homepage {
+	text-align: center;
+}
+
+a {
+	text-decoration: none!important;
+}
