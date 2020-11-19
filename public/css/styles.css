@@ -1,0 +1,18 @@
+body {
+	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: black;
+	line-height: 1.5;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+
+.nav-item {
+	padding-right: 1em;
+	padding-left: 1em;
+}
