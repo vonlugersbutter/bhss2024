@@ -73,7 +73,7 @@ h1 {
 	padding-bottom: 0.5em;
 }
 
-h2 {
+h2, h3 {
 	font-family: 'Playfair Display', serif;
 }
 
@@ -95,11 +95,16 @@ a {
     font-size: 120%;
 }
 
+#teamcard > .name {
+	font-size: 100%;
+	margin-bottom: 2.5em;
+}
+
 .position {
     font-style: italic;
 }
 
-#card {
+#card, #teamcard {
     margin-bottom: 0px;
     border: none;
     color: black;
@@ -108,6 +113,10 @@ a {
 
 #card > img {
     border-radius: 60px;
+}
+
+#teamcard > img {
+	border-radius: 60px;
 }
 
 .btn:hover {
@@ -122,7 +131,7 @@ a {
     margin-bottom: 1em;
   }
 
-.modal-body, .modal-header > * {
+.modal-body, .modal-header, #teamcard > * {
     margin-left: 3%;
     margin-right: 3%;
 }
@@ -135,6 +144,10 @@ a {
     word-wrap: break-word;
 }
 
-.btn-primary {
+.btn-primary, #teamcard {
 	background-color: white;
+}
+
+#teamcard {
+	text-align: center;
 }

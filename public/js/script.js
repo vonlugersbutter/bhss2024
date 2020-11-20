@@ -1,7 +1,11 @@
 $(function() {
-    $("#navigation").load("nav.html");
+    $("#navigation").load("/nav.html");
 });
 
 $(function() {
-    $("#footer").load("footer.html");
+    $("#footer").load("/footer.html");
+});
+
+$(function() {
+    $("#teamcards").load("/teamcards.html");
 });
