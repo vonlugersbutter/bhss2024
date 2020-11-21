@@ -36,6 +36,10 @@ body {
 	width: 70%;
 }
 
+#sponsors {
+	text-align: right;
+}
+
 @media (max-width:992px) {
 	.container {
 		width: 95%;
@@ -157,8 +161,10 @@ a {
 
 #footer {
 	margin-top: 4em;
+	margin-bottom: 4em;
+	
 }
 
-#sponsors {
-	text-align: right;
+.btn-info:hover {
+	color: teal;
 }
