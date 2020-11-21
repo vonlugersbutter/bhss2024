@@ -40,6 +40,9 @@ body {
 	.container {
 		width: 95%;
 	}
+	#logo-footer, #sponsors {
+		text-align: center;
+	}
 }
 
 .jumbotron-fluid > img {
@@ -150,4 +153,12 @@ a {
 
 #teamcard {
 	text-align: center;
+}
+
+#footer {
+	margin-top: 4em;
+}
+
+#sponsors {
+	text-align: right;
 }
