@@ -193,3 +193,7 @@ iframe {
 .elfsight-app-0159a88f-e24e-494f-8b9f-68af84171856 {
 	position: relative;
 }
+
+.clickable {
+    cursor: pointer;
+}
