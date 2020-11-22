@@ -168,3 +168,28 @@ a {
 .btn-info:hover {
 	color: teal;
 }
+
+iframe {
+	width: 100%;
+	height: 25em;
+}
+
+.blue {
+	color: blue;
+}
+
+.yellow {
+	color: #FFB703;
+}
+
+.red {
+	color: red;
+}
+
+.grey {
+	color:darkgray;
+}
+
+.elfsight-app-0159a88f-e24e-494f-8b9f-68af84171856 {
+	position: relative;
+}
