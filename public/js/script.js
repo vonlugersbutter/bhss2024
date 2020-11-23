@@ -7,5 +7,5 @@ $(function() {
 });
 
 $(function() {
-    $("#teamcards").load("teamcards.html");
+    $("#teamcards").load("/teamcards.html");
 });
