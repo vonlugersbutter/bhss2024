@@ -119,11 +119,11 @@ a {
 }
 
 #card > img {
-    border-radius: 60px;
+    border-radius: 50%;
 }
 
 #teamcard > img {
-	border-radius: 60px;
+	border-radius: 50%;
 }
 
 .btn:hover {
@@ -196,4 +196,24 @@ iframe {
 
 .clickable {
     cursor: pointer;
+}
+
+.blurb {
+	font-size: 80%;
+}
+
+#card {
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.col-sm-3 {
+	align-items: center;
+}
+
+@media (max-width: 992px) {
+	#card {
+		padding-left: 20%;
+	}
 }
