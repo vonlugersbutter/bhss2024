@@ -104,7 +104,7 @@ a {
 
 #teamcard > .name {
 	font-size: 100%;
-	margin-bottom: 2.5em;
+	margin-bottom: 1.5em;
 }
 
 .position {
@@ -216,4 +216,16 @@ iframe {
 	#card {
 		padding-left: 20%;
 	}
+}
+
+.btn-light {
+	margin-bottom: 2.5em;
+}
+
+.beef {
+	display: none;
+}
+
+.boi {
+	font-size: 15px;
 }
