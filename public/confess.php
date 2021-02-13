@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -21,13 +20,11 @@
   <div class="container">
     <h1><span>Confessions</span></h1>
 
-    <form name="confession_form" method="post">
-        <div class="form-group">
-          <label for="confession">Do it.</label>
-          <input style="width: 50%;" type="text" class="form-control" placeholder="don't worry it's anonymous" name="confession">
-        </div>
-        <button type="submit" class="btn btn-info">confess</button>
-      </form>
+    <form action="">
+      <input type="text" name="confession" id="confession" required>
+      <label for="">Do it.</label>
+      <input type="submit" value="Save">
+    </form>
     
     <br>
     <br>
@@ -47,15 +44,12 @@
 </body>
 </html>
 
-
 <?php
 
-if(isset($_POST['confession']))
-{
-$data=$_POST['confession'];
+  ectract($_REQUEST);
+  $file=fopen("data.txt", "a");
+  fwrite($file, "confession: ");
+  fwrite($file, $confession ."\n");
+  fclose($file);
 
-$fp = fopen('data.txt', 'a');
-fwrite($fp, $data);
-fclose($fp);
-}
 ?>
