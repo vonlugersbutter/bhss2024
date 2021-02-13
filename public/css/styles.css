@@ -234,6 +234,8 @@ iframe {
 	background-color:#8ECAE6;
 }
 
-#confession {
+.confession {
+	margin-top: 1em;
 	background-color: #8ECAE6;
+	margin-bottom: 1em;
 }
