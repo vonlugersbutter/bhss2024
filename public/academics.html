@@ -9,44 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='fullcalendar/main.css' rel='stylesheet' />
-    <script src='fullcalendar/main.js'></script>
-    <script type='text/javascript'>
-
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('academicscalendar');
-    
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          googleCalendarApiKey: 'AIzaSyBr4y6Vd-wllfgQnv2f9b8gJbr6WB7w4N8',
-          eventSources: [
-            {
-              googleCalendarId: 'c_0u5rbmd7j9o457m63i5vu7cfqc@group.calendar.google.com',
-              color: 'red'
-            },
-            {
-              googleCalendarId: 'c_vihcps8gekusgnh7bd4dbd9rqg@group.calendar.google.com',
-              color: 'green'
-            },
-            {
-              googleCalendarId: 'c_27jligpsugjfcppfpcb3ghbs00@group.calendar.google.com',
-              color: 'purple'
-            },
-            {
-              googleCalendarId: 'c_mr325sgdqeefaobeh7tvc9ihlc@group.calendar.google.com',
-              color: 'orange'
-            },
-            {
-              googleCalendarId: 'c_6ia5g3g3vhhnd5viuo0s9lllj8@group.calendar.google.com',
-              color: 'brown'
-            }
-            
-          ]
-        });
-    
-        calendar.render();
-      });
-    
-    </script>
 </head>
 
 <body>
@@ -62,23 +24,6 @@
     <br>
     <br>
     <br>
-    <h2>Academics Calendar</h2>
-    <p>Here's a calendar with due dates for required and common elective courses, as well as any relevant initiatives.</p>
-    <div class="row">
-      <div class="col-sm-3">
-        <p>🟢 CLASSICS 2MT3</p>
-        <p>🔴 CHEM 1AA3</p>
-        
-      </div>
-      <div class="col-sm-3">
-        <p>🟡 HTHSCI 1X01</p>
-        <p>🟤 PSYCH 1XX3</p>
-      </div>
-      <div class="col-sm-3">
-        <p>🟣 HTHSCI 1I06</p>
-      </div>
-    </div>
-    <div id='academicscalendar'></div>
   </div>
 </div>
 
