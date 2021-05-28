@@ -45,15 +45,15 @@ body {
 	margin: 0;
   }
   
-  .wrap {
+.wrap {
 	overflow: hidden;
 	position: relative;
 	height: 100vh;
-	background-image: linear-gradient(-206deg, #6ba7c7 0%, #ffffff 100%);
-  }
+	background-image: linear-gradient(-206deg, #003049 0%, #D62828 100%);
+}
   
-  canvas {
+canvas {
 	width: 100%;
 	height: 100%;
-  }
+}
   
