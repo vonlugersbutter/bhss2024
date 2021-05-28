@@ -1,0 +1,59 @@
+/*	Color Scheme! 
+003049 - Prussian Blue
+D62828 - Maximum Red
+F77F00 - Orange
+FCBF49 - Maximum Yellow Red
+EAE2B7 - Lemon Meringue
+*/
+
+body {
+	background-color: #003049;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	line-height: 1.5;
+}
+
+.navbar-brand {
+	padding-left: 1em;
+	font-family: 'Playfair Display', serif;
+}
+
+@media (max-width:992px) {
+	.container {
+		width: 95%;
+	}
+	#logo-footer, #sponsors {
+		text-align: center;
+	}
+}
+
+.jumbotron-fluid > img {
+	width: 100%;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0;}
+}
+
+a {
+	text-decoration: none!important;
+}
+
+body {
+	margin: 0;
+  }
+  
+  .wrap {
+	overflow: hidden;
+	position: relative;
+	height: 100vh;
+	background-image: linear-gradient(-206deg, #6ba7c7 0%, #ffffff 100%);
+  }
+  
+  canvas {
+	width: 100%;
+	height: 100%;
+  }
+  
