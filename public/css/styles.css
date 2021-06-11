@@ -14,9 +14,13 @@ body {
 	line-height: 1.5;
 }
 
+
+@media (min-width:992px) {
+
 .navbar-brand {
-	padding-left: 1em;
+	margin-left: 7%;
 	font-family: 'Playfair Display', serif;
+}
 }
 
 @media (max-width:992px) {
