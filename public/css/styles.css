@@ -7,38 +7,25 @@ EAE2B7 - Lemon Meringue
 */
 
 body {
-	background-color: #003049;
+	background-color: white;
 	font-size: 18px;
 	font-family: 'Montserrat', sans-serif;
-	color: white;
+	color: 003049;
 	line-height: 1.5;
 }
 
 
 @media (min-width:992px) {
 
-.navbar-brand {
+#icon {
 	margin-left: 7%;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Bebas Neue', cursive;
+	color: whitesmoke;
 }
-}
-
-@media (max-width:992px) {
-	.container {
-		width: 95%;
-	}
-	#logo-footer, #sponsors {
-		text-align: center;
-	}
 }
 
 .jumbotron-fluid > img {
 	width: 100%;
-}
-
-@media all and (min-width: 992px) {
-	.navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item .dropdown-menu{ margin-top:0;}
 }
 
 a {
@@ -53,11 +40,25 @@ body {
 	overflow: hidden;
 	position: relative;
 	height: 100vh;
-	background-image: linear-gradient(-206deg, #003049 0%, #D62828 100%);
+	background-image: linear-gradient(-206deg, #22577A 0%, #38A3A5 100%);
 }
   
 canvas {
 	width: 100%;
 	height: 100%;
 }
-  
+
+.nav-item {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.nav-link {
+	color: white;
+}
+
+h1 {
+	font-family: 'Bebas Neue', cursive;
+	color: whitesmoke;
+	font-size: 5em;
+}

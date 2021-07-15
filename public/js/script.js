@@ -1,15 +1,3 @@
-$(function() {
-    $("#navigation").load("nav.html");
-});
-
-$(function() {
-    $("#footer").load("footer.html");
-});
-
-$(function() {
-    $("#teamcards").load("/teamcards.html");
-});
-
 ;(function() {
 
   "use strict";
@@ -269,7 +257,7 @@ $(function() {
       ctx = screen.ctx;
   screen.resize();
   // create LavaLamps
-  lava0 = new LavaLamp(screen.width, screen.height, 6, "#EAE2B7", "#F77F00");
+  lava0 = new LavaLamp(screen.width, screen.height, 6, "#57CC99", "#C7F9CC");
 
   run();
 
