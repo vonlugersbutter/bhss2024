@@ -16,7 +16,7 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light fixed-top bg-transparent">
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
       <a class="navbar-brand" id="icon" href="index.html">BHSS 2024</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -56,150 +56,163 @@
     <canvas></canvas>
   </div>
 
-  <div style="position: absolute; z-index: 1; left: 15%; top: 250px; width:none; height:20px; background-color: none;">
+  <div class="container" id="paws" style="position: absolute; z-index: 1; top: 0px; height:20px; background-color: none;">
+    <svg height="600" width="590">
+      <!--left paw digits-->
+      <polygon class="st1" points="120,60 105,82 123,93"/>
+      <polygon class="st2" points="116,108 94,137 124,166"/>
+      <polygon class="st3" points="116,108 124,166 135,140"/>
+      <polygon class="st4" points="94,137 101,177 124,166"/>
+      <polygon class="st5" points="101,177 128,203 124,166"/>
+      <polygon class="st1" points="128,203 124,166 152,179"/>
+      <polygon class="st2" points="124,166 152,179 151,154"/>
+      <polygon class="st3" points="124,166 135,140 151,154"/>
+      
+      <polygon class="st4" points="205,60 203,94 220,84"/>
+      <polygon class="st5" points="210,111 191,139 203,164"/>
+      <polygon class="st1" points="210,111 203,164 234,137"/>
+      <polygon class="st2" points="234,137 203,164 226,180"/>
+      <polygon class="st3" points="226,180 203,164 197,202"/>
+      <polygon class="st4" points="173,179 203,164 197,202"/>
+      <polygon class="st5" points="176,156 173,179 203,164"/>
+      <polygon class="st1" points="191,139 203,164 176,156"/>
+      
+      <polygon class="st2" points="55,146 43,168 63,176"/>
+      <polygon class="st3" points="66,190 54,206 83,209"/>
+      <polygon class="st4" points="54,206 83,209 63,245"/>
+      <polygon class="st5" points="83,209 76,221 104,217"/>
+      <polygon class="st1" points="104,217 76,221 115,246"/>
+      <polygon class="st2" points="115,246 76,221 89,263"/>
+      <polygon class="st3" points="89,263 76,221 63,245"/>
+      
+      <polygon class="st4" points="259,190 244,209 272,209"/>
+      <polygon class="st5" points="271,145 263,176 283,169"/>
+      <polygon class="st1" points="272,209 244,209 265,245"/>
+      <polygon class="st2" points="244,209 251,223 222,217"/>
+      <polygon class="st3" points="222,217 251,223 210,245"/>
+      <polygon class="st4" points="251,223 210,245 237,263"/>
+      <polygon class="st5" points="237,263 251,223 265,245"/>
+      
+      <!--left paw heel-->
+      
+      <polygon class="st1" points="167,237 137,258 158,277"/>
+      <polygon class="st2" points="167,237 158,277 168,301 178,277"/>
+      <polygon class="st3" points="167,237 178,277 199,259"/>
+      <polygon class="st4" points="137,258 158,277 118,285"/>
+      <polygon class="st5" points="158,277 127,326 117,286"/>
+      <polygon class="st1" points="118,286 127,326 101,312"/>
+      <polygon class="st2" points="101,312 127,326 107,344"/>
+      <polygon class="st3" points="107,344 127,326 138,355"/>
+      <polygon class="st4" points="138,355 127,326 169,347"/>
+      <polygon class="st5" points="169,347 127,326 150,313"/>
+      <polygon class="st1" points="127,326 168,301 158,277"/>
+      <polygon class="st2" points="168,301 150,313 169,347"/>
+      <polygon class="st3" points="169,347 168,301 187,313"/>
+      <polygon class="st4" points="178,277 168,301 209,327"/>
+      <polygon class="st5" points="169,347 209,327 187,313"/>
+      <polygon class="st1" points="169,347 198,356 209,327"/>
+      <polygon class="st2" points="209,327 198,356 230,344"/>
+      <polygon class="st3" points="199,259 178,277 220,285"/>
+      <polygon class="st4" points="220,285 178,277 209,327"/>
+      <polygon class="st5" points="209,327 220,285 236,312"/>
+      <polygon class="st1" points="236,312 209,327 230,344"/>
+      
+      <!--right paw digits-->
+      <polygon class="st1" points="420,160 405,182 423,193"/>
+      <polygon class="st2" points="416,208 394,237 424,266"/>
+      <polygon class="st3" points="416,208 424,266 435,240"/>
+      <polygon class="st4" points="394,237 401,277 424,266"/>
+      <polygon class="st5" points="401,277 428,303 424,266"/>
+      <polygon class="st1" points="428,303 424,266 452,279"/>
+      <polygon class="st2" points="424,266 452,279 451,254"/>
+      <polygon class="st3" points="424,266 435,240 451,254"/>
+      
+      <polygon class="st4" points="505,160 503,194 520,184"/>
+      <polygon class="st5" points="510,211 491,239 503,264"/>
+      <polygon class="st1" points="510,211 503,264 534,237"/>
+      <polygon class="st2" points="534,237 503,264 526,280"/>
+      <polygon class="st3" points="526,280 503,264 497,302"/>
+      <polygon class="st4" points="473,279 503,264 497,302"/>
+      <polygon class="st5" points="476,256 473,279 503,264"/>
+      <polygon class="st1" points="491,239 503,264 476,256"/>
+      
+      <polygon class="st2" points="355,246 343,268 363,276"/>
+      <polygon class="st3" points="366,290 354,306 383,309"/>
+      <polygon class="st4" points="354,306 383,309 363,345"/>
+      <polygon class="st5" points="383,309 376,321 404,317"/>
+      <polygon class="st1" points="404,317 376,321 415,346"/>
+      <polygon class="st2" points="415,346 376,321 389,363"/>
+      <polygon class="st3" points="389,363 376,321 363,345"/>
+      
+      <polygon class="st4" points="559,290 544,309 572,309"/>
+      <polygon class="st5" points="571,245 563,276 583,269"/>
+      <polygon class="st1" points="572,309 544,309 565,345"/>
+      <polygon class="st2" points="544,309 551,323 522,317"/>
+      <polygon class="st3" points="522,317 551,323 510,345"/>
+      <polygon class="st4" points="551,323 510,345 537,363"/>
+      <polygon class="st5" points="537,363 551,323 565,345"/>
+      
+      <!--right paw heel-->
+      
+      <polygon class="st1" points="467,337 437,358 458,377"/>
+      <polygon class="st2" points="467,337 458,377 468,401 478,377"/>
+      <polygon class="st3" points="467,337 478,377 499,359"/>
+      <polygon class="st4" points="437,358 458,377 418,385"/>
+      <polygon class="st5" points="458,377 427,426 417,386"/>
+      <polygon class="st1" points="418,386 427,426 401,412"/>
+      <polygon class="st2" points="401,412 427,426 407,444"/>
+      <polygon class="st3" points="407,444 427,426 438,455"/>
+      <polygon class="st4" points="438,455 427,426 469,447"/>
+      <polygon class="st5" points="469,447 427,426 450,413"/>
+      <polygon class="st1" points="427,426 468,401 458,377"/>
+      <polygon class="st2" points="468,401 450,413 469,447"/>
+      <polygon class="st3" points="469,447 468,401 487,413"/>
+      <polygon class="st4" points="478,377 468,401 509,427"/>
+      <polygon class="st5" points="469,447 509,427 487,413"/>
+      <polygon class="st1" points="469,447 498,456 509,427"/>
+      <polygon class="st2" points="509,427 498,456 530,444"/>
+      <polygon class="st3" points="499,359 478,377 520,385"/>
+      <polygon class="st4" points="520,385 478,377 509,427"/>
+      <polygon class="st5" points="509,427 520,385 536,412"/>
+      <polygon class="st1" points="536,412 509,427 530,444"/>
+      
+    </svg>
+      
+  </div>
+
+  <div id="intro" style="position: absolute; z-index: 1; top: 250px; height:20px; background-color: none;">
     <h1>bhss 2024</h1>
-    <p style="color: whitesmoke;">Welcome to the 2024 Wolfpack homebase.</p>
+    <p style="color: whitesmoke;">Welcome to the 2024 Wolfpack.</p>
 </div>
 
   <div class="container">
     <h2>Hello!</h2>
-    <p>This is a homebase for the BHSc (Hons) McMaster University Class of 2024 cohort. Your local web developer has revamped the old website to make it easier to navigate, color-customizable to your house, and with more neat pages and whatnot. All of the content here is curated and published by the BHSS Second Year Council. </p>
+    <p>This is a homebase for the BHSc (Hons) McMaster University Class of 2024 cohort. Your friendly local web developer has revamped the old website to make it easier to navigate, color-customizable to your house, and with more neat pages and whatnot. All of the content here is curated and published by the BHSS Second Year Council. </p>
+    <p>Go ahead and pick your house in the dropdown below to see the color change! If you want to learn more about houses, head to the <a href="spirit.html">spirit</a> page.</p>
+      <select name="theme-select" id="theme-select">
+        <option value="light">Default</option>
+        <option value="ignacio">Ignacio</option>
+        <option value="aquatico">Aquatico</option>
+        <option value="terra">Terra</option>
+        <option value="ventus">Ventus</option>
+    </select>
+    
   </div>
-
-  <div class="container" style="position: absolute; z-index: 1; left: 40%; top: 50px; width:none; height:20px; background-color: none;">
-    <svg height="600" width="600">
-      <!--left paw digits-->
-      <polygon points="120,60 105,82 123,93"/>
-      <polygon points="116,108 94,137 124,166"/>
-      <polygon points="116,108 124,166 135,140"/>
-      <polygon points="94,137 101,177 124,166"/>
-      <polygon points="101,177 128,203 124,166"/>
-      <polygon points="128,203 124,166 152,179"/>
-      <polygon points="124,166 152,179 151,154"/>
-      <polygon points="124,166 135,140 151,154"/>
-      
-      <polygon points="205,60 203,94 220,84"/>
-      <polygon points="210,111 191,139 203,164"/>
-      <polygon points="210,111 203,164 234,137"/>
-      <polygon points="234,137 203,164 226,180"/>
-      <polygon points="226,180 203,164 197,202"/>
-      <polygon points="173,179 203,164 197,202"/>
-      <polygon points="176,156 173,179 203,164"/>
-      <polygon points="191,139 203,164 176,156"/>
-      
-      <polygon points="55,146 43,168 63,176"/>
-      <polygon points="66,190 54,206 83,209"/>
-      <polygon points="54,206 83,209 63,245"/>
-      <polygon points="83,209 76,221 104,217"/>
-      <polygon points="104,217 76,221 115,246"/>
-      <polygon points="115,246 76,221 89,263"/>
-      <polygon points="89,263 76,221 63,245"/>
-      
-      <polygon points="259,190 244,209 272,209"/>
-      <polygon points="271,145 263,176 283,169"/>
-      <polygon points="272,209 244,209 265,245"/>
-      <polygon points="244,209 251,223 222,217"/>
-      <polygon points="222,217 251,223 210,245"/>
-      <polygon points="251,223 210,245 237,263"/>
-      <polygon points="237,263 251,223 265,245"/>
-      
-      <!--left paw heel-->
-      
-      <polygon points="167,237 137,258 158,277"/>
-      <polygon points="167,237 158,277 168,301 178,277"/>
-      <polygon points="167,237 178,277 199,259"/>
-      <polygon points="137,258 158,277 118,285"/>
-      <polygon points="158,277 127,326 117,286"/>
-      <polygon points="118,286 127,326 101,312"/>
-      <polygon points="101,312 127,326 107,344"/>
-      <polygon points="107,344 127,326 138,355"/>
-      <polygon points="138,355 127,326 169,347"/>
-      <polygon points="169,347 127,326 150,313"/>
-      <polygon points="127,326 168,301 158,277"/>
-      <polygon points="168,301 150,313 169,347"/>
-      <polygon points="169,347 168,301 187,313"/>
-      <polygon points="178,277 168,301 209,327"/>
-      <polygon points="169,347 209,327 187,313"/>
-      <polygon points="169,347 198,356 209,327"/>
-      <polygon points="209,327 198,356 230,344"/>
-      <polygon points="199,259 178,277 220,285"/>
-      <polygon points="220,285 178,277 209,327"/>
-      <polygon points="209,327 220,285 236,312"/>
-      <polygon points="236,312 209,327 230,344"/>
-      
-      <!--right paw digits-->
-      <polygon points="420,160 405,182 423,193"/>
-      <polygon points="416,208 394,237 424,266"/>
-      <polygon points="416,208 424,266 435,240"/>
-      <polygon points="394,237 401,277 424,266"/>
-      <polygon points="401,277 428,303 424,266"/>
-      <polygon points="428,303 424,266 452,279"/>
-      <polygon points="424,266 452,279 451,254"/>
-      <polygon points="424,266 435,240 451,254"/>
-      
-      <polygon points="505,160 503,194 520,184"/>
-      <polygon points="510,211 491,239 503,264"/>
-      <polygon points="510,211 503,264 534,237"/>
-      <polygon points="534,237 503,264 526,280"/>
-      <polygon points="526,280 503,264 497,302"/>
-      <polygon points="473,279 503,264 497,302"/>
-      <polygon points="476,256 473,279 503,264"/>
-      <polygon points="491,239 503,264 476,256"/>
-      
-      <polygon points="355,246 343,268 363,276"/>
-      <polygon points="366,290 354,306 383,309"/>
-      <polygon points="354,306 383,309 363,345"/>
-      <polygon points="383,309 376,321 404,317"/>
-      <polygon points="404,317 376,321 415,346"/>
-      <polygon points="415,346 376,321 389,363"/>
-      <polygon points="389,363 376,321 363,345"/>
-      
-      <polygon points="559,290 544,309 572,309"/>
-      <polygon points="571,245 563,276 583,269"/>
-      <polygon points="572,309 544,309 565,345"/>
-      <polygon points="544,309 551,323 522,317"/>
-      <polygon points="522,317 551,323 510,345"/>
-      <polygon points="551,323 510,345 537,363"/>
-      <polygon points="537,363 551,323 565,345"/>
-      
-      <!--left paw heel-->
-      
-      <polygon points="467,337 437,358 458,377"/>
-      <polygon points="467,337 458,377 468,401 478,377"/>
-      <polygon points="467,337 478,377 499,359"/>
-      <polygon points="437,358 458,377 418,385"/>
-      <polygon points="458,377 427,426 417,386"/>
-      <polygon points="418,386 427,426 401,412"/>
-      <polygon points="401,412 427,426 407,444"/>
-      <polygon points="407,444 427,426 438,455"/>
-      <polygon points="438,455 427,426 469,447"/>
-      <polygon points="469,447 427,426 450,413"/>
-      <polygon points="427,426 468,401 458,377"/>
-      <polygon points="468,401 450,413 469,447"/>
-      <polygon points="469,447 468,401 487,413"/>
-      <polygon points="478,377 468,401 509,427"/>
-      <polygon points="469,447 509,427 487,413"/>
-      <polygon points="469,447 498,456 509,427"/>
-      <polygon points="509,427 498,456 530,444"/>
-      <polygon points="499,359 478,377 520,385"/>
-      <polygon points="520,385 478,377 509,427"/>
-      <polygon points="509,427 520,385 536,412"/>
-      <polygon points="536,412 509,427 530,444"/>
-      
-    </svg>
-      
-    </svg>
-  </div>
-
 
   <div class="container">
-    <select name="theme-select" id="theme-select">
-      <option value="light">Light Theme</option>
-      <option value="ignacio">Ignacio</option>
-      <option value="aquatico">Aquatico</option>
-      <option value="terra">Terra</option>
-      <option value="ventus">Ventus</option>
-  </select>
+    <h2>Resources</h2>
+    <p>Now that you've selected your house, try exploring the resources, spirit activities, and social platforms that the SYC has made available.</p>
+    <div class="row">
+      <div class="col-sm-4">
+        <img id="fronticons" src="icons/academic.gif" alt="">
+      </div>
+      <div class="col-sm-4">
+        <img id="fronticons" src="icons/spirit.gif" alt="">
+      </div>
+      <div class="col-sm-4">
+        <img id="fronticons" src="icons/social.gif" alt="">
+      </div>
+    </div>
   </div>
 
  
