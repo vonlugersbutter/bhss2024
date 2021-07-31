@@ -96,7 +96,7 @@ body {
 	overflow: hidden!important;
 	position: relative;
 	height: 80vh;
-	background-image: var(--bg-img);
+	background-image: var(--bg-color);
 }
 
 .nav-item {
@@ -119,7 +119,7 @@ h1 {
 	margin-bottom: 4em;
 }
 
-h2	{
+h2,h3	{
 	font-family: 'Bebas Neue', cursive;
 	color: var(--text-color);
 }
@@ -131,31 +131,31 @@ polygon {
 :root,
 :root.light {
 	--text-color: black;
-	--bg-img: linear-gradient(-206deg, #000 0%, #000 100%);
+	--bg-color: linear-gradient(-206deg, #000 0%, #000 100%);
 	--fill-color: white;
 }
 
 :root.ignacio {
 	--text-color: #D62828;
-	--bg-img: linear-gradient(-206deg, #003049 0%, #D62828 100%);
+	--bg-color: linear-gradient(-206deg, #003049 0%, #D62828 100%);
 	--fill-color: #FCBF49;
 }
 
 :root.aquatico {
 	--text-color: #03045E;
-	--bg-img: linear-gradient(-206deg, #0077B6 0%, #CAF0F8 100%);
+	--bg-color: linear-gradient(-206deg, #0077B6 0%, #CAF0F8 100%);
 	--fill-color: #0077B6;
 }
 
 :root.terra {
 	--text-color: #52796F;
-	--bg-img: linear-gradient(-206deg, #84A98C 0%, #2F3E46 100%);
+	--bg-color: linear-gradient(-206deg, #84A98C 0%, #2F3E46 100%);
 	--fill-color: #2F3E46;
 }
 
 :root.ventus {
 	--text-color: #C8B6FF;
-	--bg-img: linear-gradient(-206deg, #FFD6FF 0%, #C8B6FF 100%);
+	--bg-color: linear-gradient(-206deg, #FFD6FF 0%, #C8B6FF 100%);
 	--fill-color: #BBD0FF;
 }
 
@@ -210,4 +210,9 @@ p > a {
 #fronticons {
 	width: 12em;
 	height: 12em;
+}
+
+h3 {
+	text-align: center;
+	background-image: url(//public/icons/social v.png);
 }

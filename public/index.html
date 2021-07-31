@@ -189,28 +189,36 @@
     <h2>Hello!</h2>
     <p>This is a homebase for the BHSc (Hons) McMaster University Class of 2024 cohort. Your friendly local web developer has revamped the old website to make it easier to navigate, color-customizable to your house, and with more neat pages and whatnot. All of the content here is curated and published by the BHSS Second Year Council. </p>
     <p>Go ahead and pick your house in the dropdown below to see the color change! If you want to learn more about houses, head to the <a href="spirit.html">spirit</a> page.</p>
-      <select name="theme-select" id="theme-select">
+    <div class="d-flex justify-content-center">
+      <select name="theme-select" id="theme-select" onchange="showDiv('academicaquatico',this)">
         <option value="light">Default</option>
         <option value="ignacio">Ignacio</option>
         <option value="aquatico">Aquatico</option>
         <option value="terra">Terra</option>
         <option value="ventus">Ventus</option>
     </select>
+    </div>
+
+      
     
   </div>
 
   <div class="container">
     <h2>Resources</h2>
     <p>Now that you've selected your house, try exploring the resources, spirit activities, and social platforms that the SYC has made available.</p>
+    <br>
     <div class="row">
       <div class="col-sm-4">
         <h3>Academics</h3>
+        <p>All the resources you need to succeed in your courses.</p>
       </div>
       <div class="col-sm-4">
         <h3>Spirit</h3>
+        <p>Take part in activities and events that bring our cohort together.</p>
       </div>
       <div class="col-sm-4">
         <h3>Social</h3>
+        <p>Stay in touch with what the SYC is planning.</p>
       </div>
     </div>
   </div>
