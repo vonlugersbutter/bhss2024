@@ -207,12 +207,12 @@ p > a {
 	color: var(--text-color);
 }
 
-#fronticons {
-	width: 12em;
-	height: 12em;
-}
-
 h3 {
 	text-align: center;
-	background-image: url(//public/icons/social v.png);
+}
+
+.image {
+	background-image: url(../icons/academica.png);
+	width: 90%;
+	height: 150%;
 }
