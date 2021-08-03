@@ -134,6 +134,8 @@ polygon {
 	--bg-color: linear-gradient(-206deg, #000 0%, #000 100%);
 	--fill-color: white;
 	--aicon: url(../icons/academicdefault.png);
+	--spicon: url(../icons/spiritdefault.png);
+	--socicon: url(../icons/socialdefault.png);
 }
 
 :root.ignacio {
@@ -141,6 +143,8 @@ polygon {
 	--bg-color: linear-gradient(-206deg, #003049 0%, #D62828 100%);
 	--fill-color: #FCBF49;
 	--aicon: url(../icons/academici.png);
+	--spicon: url(../icons/spiriti.png);
+	--socicon: url(../icons/sociali.png);
 }
 
 :root.aquatico {
@@ -148,6 +152,8 @@ polygon {
 	--bg-color: linear-gradient(-206deg, #0077B6 0%, #CAF0F8 100%);
 	--fill-color: #0077B6;
 	--aicon: url(../icons/academica.png);
+	--spicon: url(../icons/spirita.png);
+	--socicon: url(../icons/sociala.png);
 }
 
 :root.terra {
@@ -155,6 +161,8 @@ polygon {
 	--bg-color: linear-gradient(-206deg, #84A98C 0%, #2F3E46 100%);
 	--fill-color: #2F3E46;
 	--aicon: url(../icons/academict.png);
+	--spicon: url(../icons/spiritt.png);
+	--socicon: url(../icons/socialt.png);
 }
 
 :root.ventus {
@@ -162,6 +170,8 @@ polygon {
 	--bg-color: linear-gradient(-206deg, #FFD6FF 0%, #C8B6FF 100%);
 	--fill-color: #BBD0FF;
 	--aicon: url(../icons/academicv.png);
+	--spicon: url(../icons/spiritv.png);
+	--socicon: url(../icons/socialv.png);
 }
 
 @keyframes shape1 {
@@ -218,4 +228,12 @@ h3 {
 
 img.academicicon {
 	content: var(--aicon);
+}
+
+img.spiriticon {
+	content: var(--spicon);
+}
+
+img.socialicon {
+	content: var(--socicon);
 }
