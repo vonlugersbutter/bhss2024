@@ -133,30 +133,35 @@ polygon {
 	--text-color: black;
 	--bg-color: linear-gradient(-206deg, #000 0%, #000 100%);
 	--fill-color: white;
+	--aicon: url(../icons/academicdefault.png);
 }
 
 :root.ignacio {
 	--text-color: #D62828;
 	--bg-color: linear-gradient(-206deg, #003049 0%, #D62828 100%);
 	--fill-color: #FCBF49;
+	--aicon: url(../icons/academici.png);
 }
 
 :root.aquatico {
 	--text-color: #03045E;
 	--bg-color: linear-gradient(-206deg, #0077B6 0%, #CAF0F8 100%);
 	--fill-color: #0077B6;
+	--aicon: url(../icons/academica.png);
 }
 
 :root.terra {
 	--text-color: #52796F;
 	--bg-color: linear-gradient(-206deg, #84A98C 0%, #2F3E46 100%);
 	--fill-color: #2F3E46;
+	--aicon: url(../icons/academict.png);
 }
 
 :root.ventus {
 	--text-color: #C8B6FF;
 	--bg-color: linear-gradient(-206deg, #FFD6FF 0%, #C8B6FF 100%);
 	--fill-color: #BBD0FF;
+	--aicon: url(../icons/academicv.png);
 }
 
 @keyframes shape1 {
@@ -211,8 +216,6 @@ h3 {
 	text-align: center;
 }
 
-.image {
-	background-image: url(../icons/academica.png);
-	width: 90%;
-	height: 150%;
+img.academicicon {
+	content: var(--aicon);
 }
