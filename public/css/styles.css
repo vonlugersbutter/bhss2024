@@ -237,3 +237,10 @@ img.spiriticon {
 img.socialicon {
 	content: var(--socicon);
 }
+
+footer > .container {
+	width: 100%;
+	background-image: var(--bg-color);
+	margin-left: 0px;
+	margin-right: 0px;
+}
