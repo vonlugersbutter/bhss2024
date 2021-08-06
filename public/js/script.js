@@ -1,15 +1,17 @@
-const setTheme = (theme) => {
+const setTheme = theme => {
   document.documentElement.className = theme;
   localStorage.setItem('theme', theme);
 }
 
-document.getElementById('theme-select').addEventListener('change', function() {
-  setTheme(this.value);
-});
-
 const getTheme = () => {
-  const theme = localStorage.getItem('theme');
-  theme && setTheme(theme);
+  let theme = localStorage.getItem('theme');
+  if(theme) setTheme(theme);
 }
- 
-getTheme();
+
+document.addEventListener('DOMContentLoaded', e => {
+  getTheme();
+  
+  document.getElementById('theme-select').addEventListener('change', e => {
+    setTheme(e.target.value);
+  });
+});
