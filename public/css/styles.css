@@ -418,10 +418,10 @@ to {
 
 @keyframes animStarHead {
 from {
-	transform: translateY(0px);
+	transform: translateY(-400px);
 }
 to {
-	transform: translateY(-500px);
+	transform: translateY(-300px);
 }
 }
 
@@ -432,7 +432,7 @@ to {
 	background-image: var(--bg-color);
 }
 
-iframe {
-	width: 1280;
-	height: 720;
+button {
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
