@@ -165,9 +165,9 @@ polygon {
 }
 
 :root.aquatico {
-	--text-color: #03045E;
-	--bg-color: linear-gradient(-206deg, #0077B6 0%, #CAF0F8 100%);
-	--fill-color: #0077B6;
+	--text-color: #26408B;
+	--bg-color: linear-gradient(-206deg, #0D0221 0%, #26408B 100%);
+	--fill-color: #C2E7D9;
 	--aicon: url(../icons/academica.png);
 	--spicon: url(../icons/spirita.png);
 	--socicon: url(../icons/sociala.png);
@@ -175,17 +175,17 @@ polygon {
 
 :root.terra {
 	--text-color: #52796F;
-	--bg-color: linear-gradient(-206deg, #84A98C 0%, #2F3E46 100%);
-	--fill-color: #2F3E46;
+	--bg-color: linear-gradient(-206deg, #646165 0%, #95A472 100%);
+	--fill-color: #DDFCAD;
 	--aicon: url(../icons/academict.png);
 	--spicon: url(../icons/spiritt.png);
 	--socicon: url(../icons/socialt.png);
 }
 
 :root.ventus {
-	--text-color: #C8B6FF;
-	--bg-color: linear-gradient(-206deg, #FFD6FF 0%, #C8B6FF 100%);
-	--fill-color: #BBD0FF;
+	--text-color: #6F2DBD;
+	--bg-color: linear-gradient(-206deg, #6F2DBD 0%, #B298DC 100%);
+	--fill-color: #B9FAF8;
 	--aicon: url(../icons/academicv.png);
 	--spicon: url(../icons/spiritv.png);
 	--socicon: url(../icons/socialv.png);
@@ -456,5 +456,27 @@ h3 > a {
 
 h3 > a:hover {
 	color: var(--text-color);
-	background-color: #ddd;
+	background-color: #eee;
+}
+
+.profile {
+	width: 90%;
+}
+
+.teammembers {
+	text-align: center;
+}
+
+.teammembers > .col-sm-3 > p {
+	margin-bottom: 0px;
+	font-size: smaller;
+}
+
+.teammembers > .col-sm-3 > img {
+	margin-top: 2em;
+}
+
+#name {
+	font-weight: bold;
+	margin-top: 1em;
 }
