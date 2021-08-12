@@ -70,7 +70,7 @@ body {
 }
 
 .wraphome {
-	height: 80vh;
+	height: 30em;
 }
 
 }
@@ -88,7 +88,7 @@ body {
 	}
 
 	.wraphome {
-		height: 100vh;
+		height: 30em;
 	}
 
 	#paws {
@@ -438,7 +438,7 @@ to {
 .wrap {
 	overflow: hidden!important;
 	position: relative;
-	height: 60vh;
+	height: 25em;
 	background-image: var(--bg-color);
 }
 
