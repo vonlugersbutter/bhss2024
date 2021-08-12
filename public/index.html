@@ -17,7 +17,7 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light navbar-fixed-top">
       <a class="navbar-brand" id="icon" href="index.html">BHSS 2024</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,18 +32,14 @@
           <li class="nav-item">
             <a class="nav-link" href="spirit.html" style="color: white;">Spirit</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href=""id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
-              Social
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="accounts.html">Accounts</a>
-              <a class="dropdown-item" href="confess.html">Confessions</a>
-              <a class="dropdown-item" href="blog.html">Blog</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="social.html" style="color: white;">Social</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html" style="color: white;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" style="color: white;">My Account</a>
           </li>
         </ul>
       </div>
@@ -54,7 +50,7 @@
     <canvas></canvas>
   </div>
 
-  <div class="container" id="paws" style="position: absolute; z-index: 1; top: 0px; height:20px; background-color: none;">
+  <div class="container" id="paws" style=" background-color: none;">
     <svg height="600" width="590">
       <!--left paw digits-->
       <polygon class="st1" points="120,60 105,82 123,93"/>
@@ -178,7 +174,7 @@
       
   </div>
 
-  <div id="intro" style="position: absolute; z-index: 1; top: 250px; height:20px; background-color: none;">
+  <div id="intro" style="  background-color: none;">
     <h1>bhss 2024</h1>
     <p style="color: whitesmoke;">Welcome to the 2024 Wolfpack.</p>
 </div>
@@ -217,7 +213,7 @@
       </div>
       <div class="col-sm-4">
         <img class="spiriticon" width="100%">
-        <h3>Spirit</h3>
+        <h3><a href="spirit.html">Spirit</a></h3>
         <p>Take part in activities and events that bring our cohort together.</p>
       </div>
       <div class="col-sm-4">

@@ -42,7 +42,6 @@ body {
 	color: 003049;
 	line-height: 1.5;
 	margin: 0px;
-	padding: 0px;
 }
 
 @media (min-width:768px) {
@@ -58,11 +57,20 @@ body {
 
 #intro {
 	left: 100px;
+	position: absolute; 
+	z-index: 1;
+	top: 250px; height:20px;
 }
 
 #paws {
 	right: 100px;
 	width: 600px;
+	position: absolute; z-index: 1;
+	top: 0px; height:20px; 
+}
+
+.wraphome {
+	height: 80vh;
 }
 
 }
@@ -75,6 +83,17 @@ body {
 	#intro {
 		left: 10%;
 		font-size: 0.95em;
+		position: absolute;
+		top: 400px;
+	}
+
+	.wraphome {
+		height: 100vh;
+	}
+
+	#paws {
+		position:absolute;
+		top: 160px;
 	}
 
 	.container {
@@ -82,22 +101,13 @@ body {
 	}
 }
 
-.jumbotron-fluid > img {
-	width: 100%;
-}
-
 a {
 	text-decoration: none!important;
 }
 
-body {
-	margin: 0;
-  }
-  
 .wraphome {
 	overflow: hidden!important;
 	position: relative;
-	height: 80vh;
 	background-image: var(--bg-color);
 }
 
@@ -432,7 +442,19 @@ to {
 	background-image: var(--bg-color);
 }
 
-button {
+#pagebutton {
 	margin-top: 2em;
 	margin-bottom: 2em;
+}
+
+h3 > a {
+	color: var(--text-color);
+	padding-left: 1em;
+	padding-right: 1em;
+	border-radius: 5px;
+}
+
+h3 > a:hover {
+	color: var(--text-color);
+	background-color: #ddd;
 }
