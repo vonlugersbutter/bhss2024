@@ -16,21 +16,27 @@ document.addEventListener('DOMContentLoaded', e => {
   });
 });
 
-ui.start('#firebaseui-auth-container', {
-  signInOptions: [
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ]
-});
-
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 var uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-      // User successfully signed in.
-      // Return type determines whether we continue the redirect automatically
-      // or whether we leave that to developer to handle.
+      var user = authResult.user;
+      var credential = authResult.credential;
+      var isNewUser = authResult.additionalUserInfo.isNewUser;
+      var providerId = authResult.additionalUserInfo.providerId;
+      var operationType = authResult.operationType;
+      // Do something with the returned AuthResult.
+      // Return type determines whether we continue the redirect
+      // automatically or whether we leave that to developer to handle.
       return true;
+    },
+    signInFailure: function(error) {
+      // Some unrecoverable error occurred during sign-in.
+      // Return a promise when error handling is completed and FirebaseUI
+      // will reset, clearing any UI. This commonly occurs for error code
+      // 'firebaseui/anonymous-upgrade-merge-conflict' when merge conflict
+      // occurs. Check below for more details on this.
+      return handleUIError(error);
     },
     uiShown: function() {
       // The widget is rendered.
@@ -38,46 +44,51 @@ var uiConfig = {
       document.getElementById('loader').style.display = 'none';
     }
   },
+  credentialHelper: firebaseui.auth.CredentialHelper.NONE,
+  // Query parameter name for mode.
+  queryParameterForWidgetMode: 'mode',
+  // Query parameter name for sign in success url.
+  queryParameterForSignInSuccessUrl: 'signInSuccessUrl',
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
   signInSuccessUrl: '<url-to-redirect-to-on-success>',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ]
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+    {
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      // Whether the display name should be displayed in the Sign Up page.
+      requireDisplayName: true
+    },
+    {
+      provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+      // Invisible reCAPTCHA with image challenge and bottom left badge.
+      recaptchaParameters: {
+        type: 'image',
+        size: 'invisible',
+        badge: 'bottomleft'
+      }
+    },
+    firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+  ],
+  // Set to true if you only have a single federated provider like
+  // firebase.auth.GoogleAuthProvider.PROVIDER_ID and you would like to
+  // immediately redirect to the provider's site instead of showing a
+  // 'Sign in with Provider' button first. In order for this to take
+  // effect, the signInFlow option must also be set to 'redirect'.
+  immediateFederatedRedirect: false,
+  // tosUrl and privacyPolicyUrl accept either url string or a callback
+  // function.
+  // Terms of service url/callback.
+  tosUrl: '<your-tos-url>',
+  // Privacy policy url/callback.
+  privacyPolicyUrl: function() {
+    window.location.assign('<your-privacy-policy-url>');
+  }
 };
 
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+// The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
-
-// Temp variable to hold the anonymous user data if needed.
-var data = null;
-// Hold a reference to the anonymous current user.
-var anonymousUser = firebase.auth().currentUser;
-ui.start('#firebaseui-auth-container', {
-  // Whether to upgrade anonymous users should be explicitly provided.
-  // The user must already be signed in anonymously before FirebaseUI is
-  // rendered.
-  autoUpgradeAnonymousUsers: true,
-  signInSuccessUrl: '<url-to-redirect-to-on-success>',
-  signInOptions: [
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ],
-  callbacks: {
-    // signInFailure callback must be provided to handle merge conflicts which
-    // occur when an existing credential is linked to an anonymous user.
-    signInFailure: function(error) {
-      // For merge conflicts, the error.code will be
-      // 'firebaseui/anonymous-upgrade-merge-conflict'.
-      if (error.code != 'firebaseui/anonymous-upgrade-merge-conflict') {
-        return Promise.resolve();
-      }
-      // The credential the user tried to sign in with.
-      var cred = error.credential;
-      // Copy data from anonymous user to permanent user and delete anonymous
-      // user.
-      // ...
-      // Finish sign-in after data is copied.
-      return firebase.auth().signInWithCredential(cred);
-    }
-  }
-});
