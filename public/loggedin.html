@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDoBfwlQc5zxQehI1zKK8H4fwFKN4483JU",
+    authDomain: "bhss-2024.firebaseapp.com",
+    databaseURL: "https://bhss-2024-default-rtdb.firebaseio.com",
+    projectId: "bhss-2024",
+    storageBucket: "bhss-2024.appspot.com",
+    messagingSenderId: "50882363396",
+    appId: "1:50882363396:web:1fe26f0ac55b249a9db551",
+    measurementId: "G-BYNP65XHZ5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<body>
+
+    <script>
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                document.body.innerHTML = '<h1> Congrats ' + user.displayName + ', you are done! </h1> <h2> Now get back to what you love building. </h2> <h2> Need to verify your email address or reset your password? Firebase can handle all of that for you using the email you provided: ' + user.email + '. </h2>';
+            } else {
+                console.log("no user signed in");
+            }
+        });
+    </script>
+
+    <h1>Congrats you're done! get back to work</h1>
+</body>
+</html>
