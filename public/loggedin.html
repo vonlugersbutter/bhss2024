@@ -107,12 +107,40 @@
   <div id="stars5"></div>
   <div id="stars6"></div>
 
-
-<div class="container">
-  <button class="btn btn-warning" id="logout">Log Out</button>
+<div class="container logged-in" style="display: none;">
+  <h2>Account Details</h2>
+  <div class="account-details">
+    
+  </div>
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-danger" id="logout">Log Out</button>
+  </div>
 </div>
 
+
+<div class="container">
+  
+</div>
+
+<div class="container logged-in" style="display: none;">
+  <form id="create-form">
+    <div class="form-group">
+      <label for="name">Make a New Post</label>
+      <input type="text" class="form-control" id="body" placeholder="Body Text">
+      <small id="nameNote" class="form-text text-muted">Your account name will be visible alongside your post.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<div class="container">
+  <h2 class="logged-in" style="display: none;">Forum Posts</h2>
+</div>
 <div class="container forumposts">
+</div>
+
+<div class="container">
+  <a class="btn btn-info logged-out" id="login" role="button" href="myaccount.html" style="display: none;">Log In or Sign Up</a>
 </div>
 
 <div id="stars"></div>
