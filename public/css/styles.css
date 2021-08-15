@@ -500,3 +500,9 @@ h3 > a:hover {
 	background-color: var(--fill-color);
 	text-align: center;
 }
+
+.post {
+	padding: 1em;
+	margin-bottom: 1em;
+	background-color: #eee;
+}
