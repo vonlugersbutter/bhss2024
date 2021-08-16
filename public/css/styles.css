@@ -424,10 +424,10 @@ footer {
 
 @keyframes animStar {
 from {
-	transform: translateY(0px);
+	transform: translateY(-100px);
 }
 to {
-	transform: translateY(-100px);
+	transform: translateY(0px);
 }
 }
 
