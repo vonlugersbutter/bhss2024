@@ -504,5 +504,6 @@ h3 > a:hover {
 .post {
 	padding: 1em;
 	margin-bottom: 1em;
-	background-color: var(--fill-color);
+	border-style: solid;
+	border-color: var(--fill-color);
 }

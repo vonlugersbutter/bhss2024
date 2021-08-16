@@ -54,6 +54,21 @@ logout.addEventListener('click', (e) => {
     console.log("user has signed out")
 });
 
+// delete account
+const deleteaccount = document.querySelector("#delete");
+deleteaccount.addEventListener('click', (e) => {
+
+  const user = firebase.auth().currentUser;
+
+  user.delete().then(() => {
+    console.log("User deleted.")
+  }).catch(err => {
+    console.log(err.message)
+  });
+  e.preventDefault();
+  alert("User account has been successfully deleted.")
+});
+
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const accountDetails = document.querySelector('.account-details');
@@ -107,7 +122,7 @@ const setupPosts = (data) => {
   data.forEach(doc => {
     const post = doc.data();
     const li = `
-        <div class="post"
+        <div class="post">
         <p><b>${post.Name}</b></p>
         <p>${post.Body}</p>
         </div>
@@ -117,6 +132,6 @@ const setupPosts = (data) => {
 
   postList.innerHTML = html;
   } else {
-    postList.innerHTML = '<p>You have been successfully logged out. You may navigate to another page, or you can sign in again below.</p>'
+    postList.innerHTML = '<p>There is no user signed in. You may navigate to another page, or you can sign in or register below.</p>'
   }
 }
