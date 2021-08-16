@@ -301,13 +301,26 @@ footer {
 	color: white;
 }
 
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+  }
+
 .fa {
 	padding: 20px;
 	font-size: 30px;
+	width: 70px;
+	height: 70px;
 	text-align: center;
 	text-decoration: none;
-	margin: 5px 2px;
+	margin: 2px;
 }
+
+.fa:hover {
+	color: white;
+  }
+
+
 
 .right-footer {
 	padding-left: 4em;

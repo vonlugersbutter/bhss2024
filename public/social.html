@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+
 
     <script>
       // Your web app's Firebase configuration
@@ -33,32 +35,9 @@
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
-    </script>
 
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-    <script type="text/javascript">
-      // FirebaseUI config.
-      var uiConfig = {
-        signInSuccessUrl: 'https://cheese.com/',
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.EmailAuthProvider.PROVIDER_ID
-        ],
-        // tosUrl and privacyPolicyUrl accept either url string or a callback
-        // function.
-        // Terms of service url/callback.
-        tosUrl: 'https://cheese.com/',
-        // Privacy policy url/callback.
-        privacyPolicyUrl: function() {
-          window.location.assign('https://cheese.com/');
-        }
-      };
-
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
+      const auth = firebase.auth();
+      const db = firebase.firestore();
     </script>
 </head>
 
@@ -163,8 +142,8 @@
         </div>
         <div class="col-sm-4 right-footer">
           <p><b>Keep In Touch</b></p>
-          <a href="#" class="fa fa-google"></a>
-          <a href="#" class="fa fa-instagram"></a>
+          <a href="https://www.facebook.com/groups/bhsc24" class="fa fa-facebook"></a>
+          <a href="https://www.instagram.com/bhsc24/" class="fa fa-instagram"></a>
           
         </div>
       </div>
