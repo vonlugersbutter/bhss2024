@@ -19,48 +19,41 @@ document.addEventListener('DOMContentLoaded', e => {
 //listen for auth status changes
 auth.onAuthStateChanged(user => {
   if (user) {
-    // get data
-    db.collection('forumposts').onSnapshot(snapshot => {
-      setupPosts(snapshot.docs);
-      setupUI(user);
-    }).catch(err => {
-      console.log(err.message)
-    });
+    const useremail = user.email;
+    if (useremail.endsWith("@mcmaster.ca") == true) {
+      //the email is ok, proceed
+      // get data
+      db.collection('forumposts').onSnapshot(snapshot => {
+        setupPosts(snapshot.docs);
+        setupUI(user);
+      });
+    } else {
+      // the email is not ok, delete account and send in error message
+      setupUI();
+      setupPosts([]);
+      alert("Access denied. You have tried to sign in with a non-McMaster email account, so your account will be automatically deleted.")
+      user.delete().then(() => {
+        console.log("User deleted.")
+      }).catch(err => {
+        console.log(err.message)
+      });
+    }
   } else {
     setupUI();
     setupPosts([]);
+    console.log("No user signed in")
   }
 });
-
-//create new post
-
-const createForm = document.querySelector('#create-form');
-createForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const user = firebase.auth().currentUser
-
-  db.collection('forumposts').add({
-    Body: createForm['body'].value,
-    Name: user.displayName
-  }).then(() => {
-    //reset the form
-    createForm.reset();
-  }).catch(err => {
-    console.log(err.message)
-  })
-});
-
 
 // log out
 
 const logout = document.querySelector('#logout');
 logout.addEventListener('click', (e) => {
-    e.preventDefault();
     auth.signOut();
+    e.preventDefault();
+    console.log("user has signed out")
 });
 
-const postList = document.querySelector('.forumposts');
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 const accountDetails = document.querySelector('.account-details');
@@ -83,6 +76,27 @@ const setupUI = (user) => {
     loggedOutLinks.forEach(item => item.style.display = 'block');
   }
 }
+
+//create new post
+
+const createForm = document.querySelector('#create-form');
+createForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const user = firebase.auth().currentUser;
+
+  db.collection('forumposts').add({
+    Body: createForm['body'].value,
+    Name: user.displayName
+  }).then(() => {
+    //reset the form
+    createForm.reset();
+  }).catch(err => {
+    console.log(err.message)
+  })
+});
+
+const postList = document.querySelector('.forumposts');
 
 const setupPosts = (data) => {
   

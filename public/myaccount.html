@@ -45,20 +45,25 @@
     
     <script>
       var uiConfig = {
-  signInSuccessUrl: 'loggedin.html',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ],
-  // tosUrl and privacyPolicyUrl accept either url string or a callback
-  // function.
-  // Terms of service url/callback.
-  tosUrl: 'https://cheese.com/',
-  // Privacy policy url/callback.
-  privacyPolicyUrl: function() {
-    window.location.assign('https://cheese.com/');
-  }
-};
+
+        callbacks: {
+          signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+            var user = authResult.user;
+
+            if (authResult.additionalUserInfo.isNewUser) {
+              console.log("new user!");
+              user.sendEmailVerification();
+            }
+            return true;
+          }
+        },
+        signInSuccessUrl: 'loggedin.html',
+        signInOptions: [
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+        ],
+        tosUrl: 'tos.html',
+        privacyPolicyUrl: 'privacypolicy.html'
+  };
 
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
