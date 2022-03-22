@@ -520,3 +520,8 @@ h3 > a:hover {
 	border-style: solid;
 	border-color: var(--fill-color);
 }
+
+#carousel > img:hover {
+	opacity: 0.5;
+}
+
