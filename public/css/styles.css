@@ -525,3 +525,6 @@ h3 > a:hover {
 	opacity: 0.5;
 }
 
+.carousel {
+	margin: 4em;
+}
